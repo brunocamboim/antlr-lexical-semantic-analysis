@@ -11,7 +11,7 @@ public class __Test__ {
 
         trabalhoParser g = new trabalhoParser(tokens, 49100, null);
         try {
-            g.prog();
+            g.parse();
         } catch (RecognitionException e) {
             e.printStackTrace();
         }
