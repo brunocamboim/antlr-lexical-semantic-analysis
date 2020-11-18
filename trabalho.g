@@ -5,13 +5,22 @@ options {
 }
 @header {
 	import java.util.HashMap;
+	import java.util.Map;
+	import java.util.Iterator;
 }
 @members {
 	String s;
 	HashMap<String, Integer> memory = new HashMap<String, Integer>();
 }
 
-parse	: 	block EOF ;
+parse	: 	block {
+			for (Map.Entry<String, Integer> entry : memory.entrySet()) {
+		            	String key = entry.getKey();
+		            	int value = entry.getValue();
+		            	System.out.println("Variavel: " + key + " - Valor: " + value);
+		        }
+			
+		} EOF ;
  
 block	:	comando*;
 
@@ -21,8 +30,6 @@ atribuicao
 	:		
 		VAR ATRIB expr SEMICOLON {
 			memory.put($VAR.text, $expr.value);
-			System.out.println("Variavel = " + $VAR.text);
-			System.out.println("Valor = " +$expr.value);
 		}
 	;
 	
