@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g 2020-11-19 01:39:56
+// $ANTLR 3.5.1 C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g 2020-11-19 19:11:47
 
 	import java.util.HashMap;
 	import java.util.Map;
@@ -54,8 +54,8 @@ public class trabalhoParser extends DebugParser {
 
 
 	public static final String[] ruleNames = new String[] {
-		"invalidRule", "atribuicao", "block", "fracao", "fator", "comando", "teste", 
-		"num", "iteracao", "termo", "exprRela", "expr", "parse", "teste_else"
+		"invalidRule", "num", "teste_else", "teste", "termo", "expr", "fracao", 
+		"block", "exprRela", "atribuicao", "parse", "comando", "fator", "iteracao"
 	};
 
 	public static final boolean[] decisionCanBacktrack = new boolean[] {
@@ -95,7 +95,7 @@ public class trabalhoParser extends DebugParser {
 	}
 
 	@Override public String[] getTokenNames() { return trabalhoParser.tokenNames; }
-	@Override public String getGrammarFileName() { return "C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g"; }
+	@Override public String getGrammarFileName() { return "C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g"; }
 
 
 		String s;
@@ -105,7 +105,7 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "parse"
-	// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:16:1: parse : block EOF ;
+	// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:16:1: parse : block EOF ;
 	public final void parse() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "parse");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -113,10 +113,10 @@ public class trabalhoParser extends DebugParser {
 		dbg.location(16, 0);
 
 		try {
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:16:7: ( block EOF )
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:16:7: ( block EOF )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:16:10: block EOF
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:16:10: block EOF
 			{
 			dbg.location(16,10);
 			pushFollow(FOLLOW_block_in_parse31);
@@ -158,7 +158,7 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "block"
-	// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:26:1: block : ( comando )* ;
+	// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:26:1: block : ( comando )* ;
 	public final void block() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "block");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -166,13 +166,13 @@ public class trabalhoParser extends DebugParser {
 		dbg.location(26, 0);
 
 		try {
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:26:7: ( ( comando )* )
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:26:7: ( ( comando )* )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:26:9: ( comando )*
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:26:9: ( comando )*
 			{
 			dbg.location(26,9);
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:26:9: ( comando )*
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:26:9: ( comando )*
 			try { dbg.enterSubRule(1);
 
 			loop1:
@@ -191,7 +191,7 @@ public class trabalhoParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:26:9: comando
+					// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:26:9: comando
 					{
 					dbg.location(26,9);
 					pushFollow(FOLLOW_comando_in_block45);
@@ -232,7 +232,7 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "comando"
-	// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:28:1: comando : ( atribuicao | teste | iteracao );
+	// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:28:1: comando : ( atribuicao | teste | iteracao );
 	public final void comando() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "comando");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -240,7 +240,7 @@ public class trabalhoParser extends DebugParser {
 		dbg.location(28, 0);
 
 		try {
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:28:9: ( atribuicao | teste | iteracao )
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:28:9: ( atribuicao | teste | iteracao )
 			int alt2=3;
 			try { dbg.enterDecision(2, decisionCanBacktrack[2]);
 
@@ -272,7 +272,7 @@ public class trabalhoParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:28:11: atribuicao
+					// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:28:11: atribuicao
 					{
 					dbg.location(28,11);
 					pushFollow(FOLLOW_atribuicao_in_comando54);
@@ -284,7 +284,7 @@ public class trabalhoParser extends DebugParser {
 				case 2 :
 					dbg.enterAlt(2);
 
-					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:28:24: teste
+					// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:28:24: teste
 					{
 					dbg.location(28,24);
 					pushFollow(FOLLOW_teste_in_comando58);
@@ -296,7 +296,7 @@ public class trabalhoParser extends DebugParser {
 				case 3 :
 					dbg.enterAlt(3);
 
-					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:28:32: iteracao
+					// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:28:32: iteracao
 					{
 					dbg.location(28,32);
 					pushFollow(FOLLOW_iteracao_in_comando62);
@@ -330,7 +330,7 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "atribuicao"
-	// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:30:1: atribuicao : VAR ATRIB expr SEMICOLON ;
+	// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:30:1: atribuicao : VAR ATRIB expr SEMICOLON ;
 	public final void atribuicao() throws RecognitionException {
 		Token VAR1=null;
 		double expr2 =0.0;
@@ -341,10 +341,10 @@ public class trabalhoParser extends DebugParser {
 		dbg.location(30, 0);
 
 		try {
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:31:2: ( VAR ATRIB expr SEMICOLON )
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:31:2: ( VAR ATRIB expr SEMICOLON )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:32:3: VAR ATRIB expr SEMICOLON
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:32:3: VAR ATRIB expr SEMICOLON
 			{
 			dbg.location(32,3);
 			VAR1=(Token)match(input,VAR,FOLLOW_VAR_in_atribuicao79); dbg.location(32,7);
@@ -385,7 +385,7 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "teste"
-	// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:40:1: teste : ( 'if ' exprRela 'then' ( comando )+ teste_else ) ;
+	// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:40:1: teste : ( 'if ' exprRela 'then' ( comando )+ teste_else ) ;
 	public final void teste() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "teste");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -393,16 +393,16 @@ public class trabalhoParser extends DebugParser {
 		dbg.location(40, 0);
 
 		try {
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:40:7: ( ( 'if ' exprRela 'then' ( comando )+ teste_else ) )
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:40:7: ( ( 'if ' exprRela 'then' ( comando )+ teste_else ) )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:40:10: ( 'if ' exprRela 'then' ( comando )+ teste_else )
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:40:10: ( 'if ' exprRela 'then' ( comando )+ teste_else )
 			{
 			dbg.location(40,10);
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:40:10: ( 'if ' exprRela 'then' ( comando )+ teste_else )
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:40:10: ( 'if ' exprRela 'then' ( comando )+ teste_else )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:40:11: 'if ' exprRela 'then' ( comando )+ teste_else
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:40:11: 'if ' exprRela 'then' ( comando )+ teste_else
 			{
 			dbg.location(40,11);
 			match(input,24,FOLLOW_24_in_teste100); dbg.location(40,17);
@@ -411,7 +411,7 @@ public class trabalhoParser extends DebugParser {
 			state._fsp--;
 			dbg.location(40,26);
 			match(input,25,FOLLOW_25_in_teste104); dbg.location(40,33);
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:40:33: ( comando )+
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:40:33: ( comando )+
 			int cnt3=0;
 			try { dbg.enterSubRule(3);
 
@@ -443,7 +443,7 @@ public class trabalhoParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:40:33: comando
+					// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:40:33: comando
 					{
 					dbg.location(40,33);
 					pushFollow(FOLLOW_comando_in_teste106);
@@ -495,7 +495,7 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "teste_else"
-	// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:43:1: teste_else : ( 'else' ( comando )+ |);
+	// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:43:1: teste_else : ( 'else' ( comando )+ |);
 	public final void teste_else() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "teste_else");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -503,7 +503,7 @@ public class trabalhoParser extends DebugParser {
 		dbg.location(43, 0);
 
 		try {
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:44:2: ( 'else' ( comando )+ |)
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:44:2: ( 'else' ( comando )+ |)
 			int alt5=2;
 			try { dbg.enterDecision(5, decisionCanBacktrack[5]);
 
@@ -528,12 +528,12 @@ public class trabalhoParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:45:3: 'else' ( comando )+
+					// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:45:3: 'else' ( comando )+
 					{
 					dbg.location(45,3);
 					considerThisBlock=!considerThisBlock;dbg.location(45,43);
 					match(input,23,FOLLOW_23_in_teste_else133); dbg.location(45,50);
-					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:45:50: ( comando )+
+					// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:45:50: ( comando )+
 					int cnt4=0;
 					try { dbg.enterSubRule(4);
 
@@ -565,7 +565,7 @@ public class trabalhoParser extends DebugParser {
 						case 1 :
 							dbg.enterAlt(1);
 
-							// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:45:50: comando
+							// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:45:50: comando
 							{
 							dbg.location(45,50);
 							pushFollow(FOLLOW_comando_in_teste_else135);
@@ -591,7 +591,7 @@ public class trabalhoParser extends DebugParser {
 				case 2 :
 					dbg.enterAlt(2);
 
-					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:45:62: 
+					// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:45:62: 
 					{
 					}
 					break;
@@ -620,7 +620,7 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "iteracao"
-	// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:47:1: iteracao : 'while' exprRela 'do' ( comando )+ ;
+	// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:47:1: iteracao : 'while' exprRela 'do' ( comando )+ ;
 	public final void iteracao() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "iteracao");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -628,10 +628,10 @@ public class trabalhoParser extends DebugParser {
 		dbg.location(47, 0);
 
 		try {
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:47:9: ( 'while' exprRela 'do' ( comando )+ )
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:47:9: ( 'while' exprRela 'do' ( comando )+ )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:47:11: 'while' exprRela 'do' ( comando )+
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:47:11: 'while' exprRela 'do' ( comando )+
 			{
 			dbg.location(47,11);
 			match(input,26,FOLLOW_26_in_iteracao147); dbg.location(47,19);
@@ -640,7 +640,7 @@ public class trabalhoParser extends DebugParser {
 			state._fsp--;
 			dbg.location(47,28);
 			match(input,22,FOLLOW_22_in_iteracao151); dbg.location(47,33);
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:47:33: ( comando )+
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:47:33: ( comando )+
 			int cnt6=0;
 			try { dbg.enterSubRule(6);
 
@@ -672,7 +672,7 @@ public class trabalhoParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:47:33: comando
+					// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:47:33: comando
 					{
 					dbg.location(47,33);
 					pushFollow(FOLLOW_comando_in_iteracao153);
@@ -718,7 +718,7 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "exprRela"
-	// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:49:1: exprRela : d= expr COMP_OP e= expr ;
+	// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:49:1: exprRela : d= expr COMP_OP e= expr ;
 	public final void exprRela() throws RecognitionException {
 		Token COMP_OP3=null;
 		double d =0.0;
@@ -730,10 +730,10 @@ public class trabalhoParser extends DebugParser {
 		dbg.location(49, 0);
 
 		try {
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:49:9: (d= expr COMP_OP e= expr )
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:49:9: (d= expr COMP_OP e= expr )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:50:2: d= expr COMP_OP e= expr
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:50:2: d= expr COMP_OP e= expr
 			{
 			dbg.location(50,3);
 			pushFollow(FOLLOW_expr_in_exprRela164);
@@ -794,7 +794,7 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "expr"
-	// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:76:1: expr returns [double value] : d= termo ( FIRST_OP e= termo )* ;
+	// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:76:1: expr returns [double value] : d= termo ( FIRST_OP e= termo )* ;
 	public final double expr() throws RecognitionException {
 		double value = 0.0;
 
@@ -809,10 +809,10 @@ public class trabalhoParser extends DebugParser {
 		dbg.location(76, 0);
 
 		try {
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:77:2: (d= termo ( FIRST_OP e= termo )* )
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:77:2: (d= termo ( FIRST_OP e= termo )* )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:78:3: d= termo ( FIRST_OP e= termo )*
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:78:3: d= termo ( FIRST_OP e= termo )*
 			{
 			dbg.location(78,4);
 			pushFollow(FOLLOW_termo_in_expr192);
@@ -822,7 +822,7 @@ public class trabalhoParser extends DebugParser {
 			 
 						value += d;
 					dbg.location(81,3);
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:81:3: ( FIRST_OP e= termo )*
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:81:3: ( FIRST_OP e= termo )*
 			try { dbg.enterSubRule(7);
 
 			loop7:
@@ -841,7 +841,7 @@ public class trabalhoParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:81:4: FIRST_OP e= termo
+					// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:81:4: FIRST_OP e= termo
 					{
 					dbg.location(81,4);
 					FIRST_OP4=(Token)match(input,FIRST_OP,FOLLOW_FIRST_OP_in_expr200); dbg.location(81,14);
@@ -888,7 +888,7 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "termo"
-	// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:87:1: termo returns [double value] : d= fator ( SECOND_OP e= fator )* ;
+	// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:87:1: termo returns [double value] : d= fator ( SECOND_OP e= fator )* ;
 	public final double termo() throws RecognitionException {
 		double value = 0.0;
 
@@ -903,10 +903,10 @@ public class trabalhoParser extends DebugParser {
 		dbg.location(87, 0);
 
 		try {
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:88:2: (d= fator ( SECOND_OP e= fator )* )
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:88:2: (d= fator ( SECOND_OP e= fator )* )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:89:3: d= fator ( SECOND_OP e= fator )*
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:89:3: d= fator ( SECOND_OP e= fator )*
 			{
 			dbg.location(89,4);
 			pushFollow(FOLLOW_fator_in_termo228);
@@ -916,7 +916,7 @@ public class trabalhoParser extends DebugParser {
 
 						value += d;
 					dbg.location(92,3);
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:92:3: ( SECOND_OP e= fator )*
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:92:3: ( SECOND_OP e= fator )*
 			try { dbg.enterSubRule(8);
 
 			loop8:
@@ -935,7 +935,7 @@ public class trabalhoParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:92:4: SECOND_OP e= fator
+					// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:92:4: SECOND_OP e= fator
 					{
 					dbg.location(92,4);
 					SECOND_OP5=(Token)match(input,SECOND_OP,FOLLOW_SECOND_OP_in_termo235); dbg.location(92,15);
@@ -982,7 +982,7 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "fator"
-	// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:98:1: fator returns [double value] : ( VAR |e= num | L_PAREN e= expr R_PAREN );
+	// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:98:1: fator returns [double value] : ( VAR |e= num | L_PAREN e= expr R_PAREN );
 	public final double fator() throws RecognitionException {
 		double value = 0.0;
 
@@ -996,7 +996,7 @@ public class trabalhoParser extends DebugParser {
 		dbg.location(98, 0);
 
 		try {
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:99:2: ( VAR |e= num | L_PAREN e= expr R_PAREN )
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:99:2: ( VAR |e= num | L_PAREN e= expr R_PAREN )
 			int alt9=3;
 			try { dbg.enterDecision(9, decisionCanBacktrack[9]);
 
@@ -1028,7 +1028,7 @@ public class trabalhoParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:100:3: VAR
+					// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:100:3: VAR
 					{
 					dbg.location(100,3);
 					VAR6=(Token)match(input,VAR,FOLLOW_VAR_in_fator262); dbg.location(100,7);
@@ -1045,7 +1045,7 @@ public class trabalhoParser extends DebugParser {
 				case 2 :
 					dbg.enterAlt(2);
 
-					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:108:5: e= num
+					// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:108:5: e= num
 					{
 					dbg.location(108,6);
 					pushFollow(FOLLOW_num_in_fator272);
@@ -1058,7 +1058,7 @@ public class trabalhoParser extends DebugParser {
 				case 3 :
 					dbg.enterAlt(3);
 
-					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:109:5: L_PAREN e= expr R_PAREN
+					// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:109:5: L_PAREN e= expr R_PAREN
 					{
 					dbg.location(109,5);
 					match(input,L_PAREN,FOLLOW_L_PAREN_in_fator281); dbg.location(109,14);
@@ -1096,7 +1096,7 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "num"
-	// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:113:1: num returns [double value] : DIGITOS (d= fracao )? ;
+	// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:113:1: num returns [double value] : DIGITOS (d= fracao )? ;
 	public final double num() throws RecognitionException {
 		double value = 0.0;
 
@@ -1110,14 +1110,14 @@ public class trabalhoParser extends DebugParser {
 		dbg.location(113, 0);
 
 		try {
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:114:2: ( DIGITOS (d= fracao )? )
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:114:2: ( DIGITOS (d= fracao )? )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:115:3: DIGITOS (d= fracao )?
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:115:3: DIGITOS (d= fracao )?
 			{
 			dbg.location(115,3);
 			DIGITOS7=(Token)match(input,DIGITOS,FOLLOW_DIGITOS_in_num312); dbg.location(115,12);
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:115:12: (d= fracao )?
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:115:12: (d= fracao )?
 			int alt10=2;
 			try { dbg.enterSubRule(10);
 			try { dbg.enterDecision(10, decisionCanBacktrack[10]);
@@ -1132,7 +1132,7 @@ public class trabalhoParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:115:12: d= fracao
+					// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:115:12: d= fracao
 					{
 					dbg.location(115,12);
 					pushFollow(FOLLOW_fracao_in_num316);
@@ -1174,7 +1174,7 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "fracao"
-	// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:120:1: fracao returns [String value] : '.' DIGITOS ;
+	// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:120:1: fracao returns [String value] : '.' DIGITOS ;
 	public final String fracao() throws RecognitionException {
 		String value = null;
 
@@ -1187,10 +1187,10 @@ public class trabalhoParser extends DebugParser {
 		dbg.location(120, 0);
 
 		try {
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:121:2: ( '.' DIGITOS )
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:121:2: ( '.' DIGITOS )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:122:3: '.' DIGITOS
+			// C:\\Users\\stzgu\\Downloads\\antlr-lexical-semantic-analysis-\\trabalho.g:122:3: '.' DIGITOS
 			{
 			dbg.location(122,3);
 			match(input,21,FOLLOW_21_in_fracao337); dbg.location(122,6);
