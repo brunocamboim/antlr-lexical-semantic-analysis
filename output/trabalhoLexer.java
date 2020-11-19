@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g 2020-11-18 12:20:47
+// $ANTLR 3.5.1 C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g 2020-11-19 01:39:56
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -45,15 +45,15 @@ public class trabalhoLexer extends Lexer {
 	public trabalhoLexer(CharStream input, RecognizerSharedState state) {
 		super(input,state);
 	}
-	@Override public String getGrammarFileName() { return "C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g"; }
+	@Override public String getGrammarFileName() { return "C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g"; }
 
 	// $ANTLR start "T__21"
 	public final void mT__21() throws RecognitionException {
 		try {
 			int _type = T__21;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:7:7: ( '.' )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:7:9: '.'
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:7:7: ( '.' )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:7:9: '.'
 			{
 			match('.'); 
 			}
@@ -72,8 +72,8 @@ public class trabalhoLexer extends Lexer {
 		try {
 			int _type = T__22;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:8:7: ( 'do' )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:8:9: 'do'
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:8:7: ( 'do' )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:8:9: 'do'
 			{
 			match("do"); 
 
@@ -93,8 +93,8 @@ public class trabalhoLexer extends Lexer {
 		try {
 			int _type = T__23;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:9:7: ( 'else' )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:9:9: 'else'
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:9:7: ( 'else' )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:9:9: 'else'
 			{
 			match("else"); 
 
@@ -114,8 +114,8 @@ public class trabalhoLexer extends Lexer {
 		try {
 			int _type = T__24;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:10:7: ( 'if ' )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:10:9: 'if '
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:10:7: ( 'if ' )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:10:9: 'if '
 			{
 			match("if "); 
 
@@ -135,8 +135,8 @@ public class trabalhoLexer extends Lexer {
 		try {
 			int _type = T__25;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:11:7: ( 'then' )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:11:9: 'then'
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:11:7: ( 'then' )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:11:9: 'then'
 			{
 			match("then"); 
 
@@ -156,8 +156,8 @@ public class trabalhoLexer extends Lexer {
 		try {
 			int _type = T__26;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:12:7: ( 'while' )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:12:9: 'while'
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:12:7: ( 'while' )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:12:9: 'while'
 			{
 			match("while"); 
 
@@ -177,8 +177,8 @@ public class trabalhoLexer extends Lexer {
 		try {
 			int _type = FIRST_OP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:105:9: ( ( '+' | '-' ) )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:125:9: ( ( '+' | '-' ) )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:
 			{
 			if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
 				input.consume();
@@ -204,8 +204,8 @@ public class trabalhoLexer extends Lexer {
 		try {
 			int _type = SECOND_OP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:108:2: ( ( '*' | '/' ) )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:128:2: ( ( '*' | '/' ) )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:
 			{
 			if ( input.LA(1)=='*'||input.LA(1)=='/' ) {
 				input.consume();
@@ -231,10 +231,10 @@ public class trabalhoLexer extends Lexer {
 		try {
 			int _type = DIGITOS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:112:9: ( ( '0' .. '9' )+ )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:112:11: ( '0' .. '9' )+
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:130:9: ( ( '0' .. '9' )+ )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:130:11: ( '0' .. '9' )+
 			{
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:112:11: ( '0' .. '9' )+
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:130:11: ( '0' .. '9' )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -246,7 +246,7 @@ public class trabalhoLexer extends Lexer {
 
 				switch (alt1) {
 				case 1 :
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:
+					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -283,8 +283,8 @@ public class trabalhoLexer extends Lexer {
 		try {
 			int _type = UNDER_SCORE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:115:2: ( '_' )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:115:5: '_'
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:133:2: ( '_' )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:133:5: '_'
 			{
 			match('_'); 
 			}
@@ -303,8 +303,8 @@ public class trabalhoLexer extends Lexer {
 		try {
 			int _type = VAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:117:6: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:117:14: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:135:6: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:135:14: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -314,7 +314,7 @@ public class trabalhoLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:117:36: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:135:36: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -325,7 +325,7 @@ public class trabalhoLexer extends Lexer {
 
 				switch (alt2) {
 				case 1 :
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:
+					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -359,10 +359,10 @@ public class trabalhoLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:119:4: ( ( ' ' | '\\n' | '\\t' | '\\r' | '\\cr' )+ )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:119:6: ( ' ' | '\\n' | '\\t' | '\\r' | '\\cr' )+
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:137:4: ( ( ' ' | '\\n' | '\\t' | '\\r' | '\\cr' )+ )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:137:6: ( ' ' | '\\n' | '\\t' | '\\r' | '\\cr' )+
 			{
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:119:6: ( ' ' | '\\n' | '\\t' | '\\r' | '\\cr' )+
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:137:6: ( ' ' | '\\n' | '\\t' | '\\r' | '\\cr' )+
 			int cnt3=0;
 			loop3:
 			while (true) {
@@ -396,31 +396,31 @@ public class trabalhoLexer extends Lexer {
 				}
 				switch (alt3) {
 				case 1 :
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:119:7: ' '
+					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:137:7: ' '
 					{
 					match(' '); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:119:11: '\\n'
+					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:137:11: '\\n'
 					{
 					match('\n'); 
 					}
 					break;
 				case 3 :
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:119:16: '\\t'
+					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:137:16: '\\t'
 					{
 					match('\t'); 
 					}
 					break;
 				case 4 :
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:119:21: '\\r'
+					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:137:21: '\\r'
 					{
 					match('\r'); 
 					}
 					break;
 				case 5 :
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:119:26: '\\cr'
+					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:137:26: '\\cr'
 					{
 					match("cr"); 
 
@@ -452,10 +452,10 @@ public class trabalhoLexer extends Lexer {
 		try {
 			int _type = COMP_OP;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:121:9: ( ( '=' | '!=' | '<' | '>' | '<=' | '>=' ) )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:121:11: ( '=' | '!=' | '<' | '>' | '<=' | '>=' )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:139:9: ( ( '=' | '!=' | '<' | '>' | '<=' | '>=' ) )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:139:11: ( '=' | '!=' | '<' | '>' | '<=' | '>=' )
 			{
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:121:11: ( '=' | '!=' | '<' | '>' | '<=' | '>=' )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:139:11: ( '=' | '!=' | '<' | '>' | '<=' | '>=' )
 			int alt4=6;
 			switch ( input.LA(1) ) {
 			case '=':
@@ -501,39 +501,39 @@ public class trabalhoLexer extends Lexer {
 			}
 			switch (alt4) {
 				case 1 :
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:121:12: '='
+					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:139:12: '='
 					{
 					match('='); 
 					}
 					break;
 				case 2 :
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:121:16: '!='
+					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:139:16: '!='
 					{
 					match("!="); 
 
 					}
 					break;
 				case 3 :
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:121:21: '<'
+					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:139:21: '<'
 					{
 					match('<'); 
 					}
 					break;
 				case 4 :
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:121:25: '>'
+					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:139:25: '>'
 					{
 					match('>'); 
 					}
 					break;
 				case 5 :
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:121:29: '<='
+					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:139:29: '<='
 					{
 					match("<="); 
 
 					}
 					break;
 				case 6 :
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:121:34: '>='
+					// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:139:34: '>='
 					{
 					match(">="); 
 
@@ -558,8 +558,8 @@ public class trabalhoLexer extends Lexer {
 		try {
 			int _type = ATRIB;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:123:8: ( ':=' )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:123:11: ':='
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:141:8: ( ':=' )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:141:11: ':='
 			{
 			match(":="); 
 
@@ -579,8 +579,8 @@ public class trabalhoLexer extends Lexer {
 		try {
 			int _type = L_PAREN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:125:9: ( '(' )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:125:12: '('
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:143:9: ( '(' )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:143:12: '('
 			{
 			match('('); 
 			}
@@ -599,8 +599,8 @@ public class trabalhoLexer extends Lexer {
 		try {
 			int _type = R_PAREN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:127:9: ( ')' )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:127:12: ')'
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:145:9: ( ')' )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:145:12: ')'
 			{
 			match(')'); 
 			}
@@ -619,8 +619,8 @@ public class trabalhoLexer extends Lexer {
 		try {
 			int _type = L_BRACKET;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:130:2: ( '{' )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:130:5: '{'
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:148:2: ( '{' )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:148:5: '{'
 			{
 			match('{'); 
 			}
@@ -639,8 +639,8 @@ public class trabalhoLexer extends Lexer {
 		try {
 			int _type = R_BRACKET;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:133:2: ( '}' )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:133:5: '}'
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:151:2: ( '}' )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:151:5: '}'
 			{
 			match('}'); 
 			}
@@ -659,8 +659,8 @@ public class trabalhoLexer extends Lexer {
 		try {
 			int _type = L_SQUARE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:135:9: ( '[' )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:135:12: '['
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:153:9: ( '[' )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:153:12: '['
 			{
 			match('['); 
 			}
@@ -679,8 +679,8 @@ public class trabalhoLexer extends Lexer {
 		try {
 			int _type = R_SQUARE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:137:9: ( ']' )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:137:12: ']'
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:155:9: ( ']' )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:155:12: ']'
 			{
 			match(']'); 
 			}
@@ -699,8 +699,8 @@ public class trabalhoLexer extends Lexer {
 		try {
 			int _type = COMMA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:139:7: ( ',' )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:139:10: ','
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:157:7: ( ',' )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:157:10: ','
 			{
 			match(','); 
 			}
@@ -719,8 +719,8 @@ public class trabalhoLexer extends Lexer {
 		try {
 			int _type = SEMICOLON;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:142:2: ( ';' )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:142:5: ';'
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:160:2: ( ';' )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:160:5: ';'
 			{
 			match(';'); 
 			}
@@ -739,8 +739,8 @@ public class trabalhoLexer extends Lexer {
 		try {
 			int _type = FallThrough;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:151:3: ( . )
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:151:6: .
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:169:3: ( . )
+			// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:169:6: .
 			{
 			matchAny(); 
 			}
@@ -749,7 +749,7 @@ public class trabalhoLexer extends Lexer {
 			state.channel = _channel;
 
 			  	throw new RuntimeException(String.format(
-			      		"Caractere ilegal reconhecido na linha %d, coluna %d: '%s'",
+			      		"Caracter ilegal reconhecido na linha %d, coluna %d: '%s'",
 			      		getLine(), getCharPositionInLine(), getText()
 				));
 
@@ -762,166 +762,166 @@ public class trabalhoLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:8: ( T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | FIRST_OP | SECOND_OP | DIGITOS | UNDER_SCORE | VAR | WS | COMP_OP | ATRIB | L_PAREN | R_PAREN | L_BRACKET | R_BRACKET | L_SQUARE | R_SQUARE | COMMA | SEMICOLON | FallThrough )
+		// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:8: ( T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | FIRST_OP | SECOND_OP | DIGITOS | UNDER_SCORE | VAR | WS | COMP_OP | ATRIB | L_PAREN | R_PAREN | L_BRACKET | R_BRACKET | L_SQUARE | R_SQUARE | COMMA | SEMICOLON | FallThrough )
 		int alt5=23;
 		alt5 = dfa5.predict(input);
 		switch (alt5) {
 			case 1 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:10: T__21
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:10: T__21
 				{
 				mT__21(); 
 
 				}
 				break;
 			case 2 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:16: T__22
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:16: T__22
 				{
 				mT__22(); 
 
 				}
 				break;
 			case 3 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:22: T__23
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:22: T__23
 				{
 				mT__23(); 
 
 				}
 				break;
 			case 4 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:28: T__24
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:28: T__24
 				{
 				mT__24(); 
 
 				}
 				break;
 			case 5 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:34: T__25
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:34: T__25
 				{
 				mT__25(); 
 
 				}
 				break;
 			case 6 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:40: T__26
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:40: T__26
 				{
 				mT__26(); 
 
 				}
 				break;
 			case 7 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:46: FIRST_OP
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:46: FIRST_OP
 				{
 				mFIRST_OP(); 
 
 				}
 				break;
 			case 8 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:55: SECOND_OP
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:55: SECOND_OP
 				{
 				mSECOND_OP(); 
 
 				}
 				break;
 			case 9 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:65: DIGITOS
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:65: DIGITOS
 				{
 				mDIGITOS(); 
 
 				}
 				break;
 			case 10 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:73: UNDER_SCORE
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:73: UNDER_SCORE
 				{
 				mUNDER_SCORE(); 
 
 				}
 				break;
 			case 11 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:85: VAR
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:85: VAR
 				{
 				mVAR(); 
 
 				}
 				break;
 			case 12 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:89: WS
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:89: WS
 				{
 				mWS(); 
 
 				}
 				break;
 			case 13 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:92: COMP_OP
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:92: COMP_OP
 				{
 				mCOMP_OP(); 
 
 				}
 				break;
 			case 14 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:100: ATRIB
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:100: ATRIB
 				{
 				mATRIB(); 
 
 				}
 				break;
 			case 15 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:106: L_PAREN
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:106: L_PAREN
 				{
 				mL_PAREN(); 
 
 				}
 				break;
 			case 16 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:114: R_PAREN
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:114: R_PAREN
 				{
 				mR_PAREN(); 
 
 				}
 				break;
 			case 17 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:122: L_BRACKET
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:122: L_BRACKET
 				{
 				mL_BRACKET(); 
 
 				}
 				break;
 			case 18 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:132: R_BRACKET
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:132: R_BRACKET
 				{
 				mR_BRACKET(); 
 
 				}
 				break;
 			case 19 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:142: L_SQUARE
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:142: L_SQUARE
 				{
 				mL_SQUARE(); 
 
 				}
 				break;
 			case 20 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:151: R_SQUARE
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:151: R_SQUARE
 				{
 				mR_SQUARE(); 
 
 				}
 				break;
 			case 21 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:160: COMMA
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:160: COMMA
 				{
 				mCOMMA(); 
 
 				}
 				break;
 			case 22 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:166: SEMICOLON
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:166: SEMICOLON
 				{
 				mSEMICOLON(); 
 
 				}
 				break;
 			case 23 :
-				// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:1:176: FallThrough
+				// C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g:1:176: FallThrough
 				{
 				mFallThrough(); 
 
