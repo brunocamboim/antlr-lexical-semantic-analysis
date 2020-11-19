@@ -1,2 +1,8 @@
-b:=5+1;
-while b<11 then b:=b+1;
+b := 4 /2;
+a := b + c * 1;
+if a=2 then
+  a:=0;
+  x:=0;
+  if b=0 then
+     a:=0;
+else b:=1;

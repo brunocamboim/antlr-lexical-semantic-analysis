@@ -37,14 +37,14 @@ atribuicao
 		}
 	;
 	
-teste	: 	('if ' exprRela 'then' comando 
+teste	: 	('if ' exprRela 'then' comando+ 
 			{considerThisBlock=!considerThisBlock;} teste_else {considerThisBlock=!considerThisBlock;});
  	
 teste_else	
 	: 
-		'else' comando;
+		'else' comando+;
 
-iteracao:	'while' exprRela 'do' comando;
+iteracao:	'while' exprRela 'do' comando+;
 
 exprRela:
 	d=expr COMP_OP e=expr {
