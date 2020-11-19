@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g 2020-11-18 12:20:47
+// $ANTLR 3.5.1 C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g 2020-11-18 23:06:25
 
 	import java.util.HashMap;
 	import java.util.Map;
@@ -54,13 +54,13 @@ public class trabalhoParser extends DebugParser {
 
 
 	public static final String[] ruleNames = new String[] {
-		"invalidRule", "iteracao", "termo", "atribuicao", "comando", "num", "block", 
-		"fracao", "exprRela", "parse", "teste_else", "fator", "expr", "teste"
+		"invalidRule", "exprRela", "parse", "block", "teste_else", "iteracao", 
+		"expr", "fracao", "fator", "teste", "atribuicao", "comando", "num", "termo"
 	};
 
 	public static final boolean[] decisionCanBacktrack = new boolean[] {
 		false, // invalid decision
-		false, false, false, false, false, false, false
+		false, false, false, false, false, false
 	};
 
  
@@ -95,16 +95,17 @@ public class trabalhoParser extends DebugParser {
 	}
 
 	@Override public String[] getTokenNames() { return trabalhoParser.tokenNames; }
-	@Override public String getGrammarFileName() { return "C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g"; }
+	@Override public String getGrammarFileName() { return "C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g"; }
 
 
 		String s;
-		HashMap<String, Integer> memory = new HashMap<String, Integer>();
+		HashMap<String, Double> memory = new HashMap<String, Double>();
+		boolean considerThisBlock = true;
 
 
 
 	// $ANTLR start "parse"
-	// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:16:1: parse : block EOF ;
+	// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:16:1: parse : block EOF ;
 	public final void parse() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "parse");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
@@ -112,25 +113,26 @@ public class trabalhoParser extends DebugParser {
 		dbg.location(16, 0);
 
 		try {
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:16:7: ( block EOF )
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:16:7: ( block EOF )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:16:10: block EOF
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:16:10: block EOF
 			{
 			dbg.location(16,10);
-			pushFollow(FOLLOW_block_in_parse33);
+			pushFollow(FOLLOW_block_in_parse31);
 			block();
 			state._fsp--;
 			dbg.location(16,16);
 
-						for (Map.Entry<String, Integer> entry : memory.entrySet()) {
+						System.out.println("\n\n Logs das variáveis\n\n");
+						for (Map.Entry<String, Double> entry : memory.entrySet()) {
 					            	String key = entry.getKey();
-					            	int value = entry.getValue();
+					            	double value = entry.getValue();
 					            	System.out.println("Variavel: " + key + " - Valor: " + value);
 					        }
 						
-					dbg.location(23,5);
-			match(input,EOF,FOLLOW_EOF_in_parse37); 
+					dbg.location(24,5);
+			match(input,EOF,FOLLOW_EOF_in_parse35); 
 			}
 
 		}
@@ -141,7 +143,7 @@ public class trabalhoParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(23, 8);
+		dbg.location(24, 8);
 
 		}
 		finally {
@@ -156,21 +158,21 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "block"
-	// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:25:1: block : ( comando )* ;
+	// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:26:1: block : ( comando )* ;
 	public final void block() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "block");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(25, 0);
+		dbg.location(26, 0);
 
 		try {
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:25:7: ( ( comando )* )
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:26:7: ( ( comando )* )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:25:9: ( comando )*
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:26:9: ( comando )*
 			{
-			dbg.location(25,9);
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:25:9: ( comando )*
+			dbg.location(26,9);
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:26:9: ( comando )*
 			try { dbg.enterSubRule(1);
 
 			loop1:
@@ -189,10 +191,10 @@ public class trabalhoParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:25:9: comando
+					// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:26:9: comando
 					{
-					dbg.location(25,9);
-					pushFollow(FOLLOW_comando_in_block47);
+					dbg.location(26,9);
+					pushFollow(FOLLOW_comando_in_block45);
 					comando();
 					state._fsp--;
 
@@ -215,7 +217,7 @@ public class trabalhoParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(25, 16);
+		dbg.location(26, 16);
 
 		}
 		finally {
@@ -230,15 +232,15 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "comando"
-	// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:27:1: comando : ( atribuicao | teste | iteracao );
+	// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:28:1: comando : ( atribuicao | teste | iteracao );
 	public final void comando() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "comando");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(27, 0);
+		dbg.location(28, 0);
 
 		try {
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:27:9: ( atribuicao | teste | iteracao )
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:28:9: ( atribuicao | teste | iteracao )
 			int alt2=3;
 			try { dbg.enterDecision(2, decisionCanBacktrack[2]);
 
@@ -270,10 +272,10 @@ public class trabalhoParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:27:11: atribuicao
+					// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:28:11: atribuicao
 					{
-					dbg.location(27,11);
-					pushFollow(FOLLOW_atribuicao_in_comando56);
+					dbg.location(28,11);
+					pushFollow(FOLLOW_atribuicao_in_comando54);
 					atribuicao();
 					state._fsp--;
 
@@ -282,10 +284,10 @@ public class trabalhoParser extends DebugParser {
 				case 2 :
 					dbg.enterAlt(2);
 
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:27:24: teste
+					// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:28:24: teste
 					{
-					dbg.location(27,24);
-					pushFollow(FOLLOW_teste_in_comando60);
+					dbg.location(28,24);
+					pushFollow(FOLLOW_teste_in_comando58);
 					teste();
 					state._fsp--;
 
@@ -294,10 +296,10 @@ public class trabalhoParser extends DebugParser {
 				case 3 :
 					dbg.enterAlt(3);
 
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:27:32: iteracao
+					// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:28:32: iteracao
 					{
-					dbg.location(27,32);
-					pushFollow(FOLLOW_iteracao_in_comando64);
+					dbg.location(28,32);
+					pushFollow(FOLLOW_iteracao_in_comando62);
 					iteracao();
 					state._fsp--;
 
@@ -313,7 +315,7 @@ public class trabalhoParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(27, 39);
+		dbg.location(28, 39);
 
 		}
 		finally {
@@ -328,32 +330,35 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "atribuicao"
-	// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:29:1: atribuicao : VAR ATRIB expr SEMICOLON ;
+	// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:30:1: atribuicao : VAR ATRIB expr SEMICOLON ;
 	public final void atribuicao() throws RecognitionException {
 		Token VAR1=null;
-		int expr2 =0;
+		double expr2 =0.0;
 
 		try { dbg.enterRule(getGrammarFileName(), "atribuicao");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(29, 0);
+		dbg.location(30, 0);
 
 		try {
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:30:2: ( VAR ATRIB expr SEMICOLON )
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:31:2: ( VAR ATRIB expr SEMICOLON )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:31:3: VAR ATRIB expr SEMICOLON
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:32:3: VAR ATRIB expr SEMICOLON
 			{
-			dbg.location(31,3);
-			VAR1=(Token)match(input,VAR,FOLLOW_VAR_in_atribuicao81); dbg.location(31,7);
-			match(input,ATRIB,FOLLOW_ATRIB_in_atribuicao83); dbg.location(31,13);
-			pushFollow(FOLLOW_expr_in_atribuicao85);
+			dbg.location(32,3);
+			VAR1=(Token)match(input,VAR,FOLLOW_VAR_in_atribuicao79); dbg.location(32,7);
+			match(input,ATRIB,FOLLOW_ATRIB_in_atribuicao81); dbg.location(32,13);
+			pushFollow(FOLLOW_expr_in_atribuicao83);
 			expr2=expr();
 			state._fsp--;
-			dbg.location(31,18);
-			match(input,SEMICOLON,FOLLOW_SEMICOLON_in_atribuicao87); dbg.location(31,28);
+			dbg.location(32,18);
+			match(input,SEMICOLON,FOLLOW_SEMICOLON_in_atribuicao85); dbg.location(32,28);
 
-						memory.put((VAR1!=null?VAR1.getText():null), expr2);
+						if(considerThisBlock){
+							memory.put((VAR1!=null?VAR1.getText():null), expr2);
+							System.out.println("Valor "+expr2+" atribuido a variavel "+(VAR1!=null?VAR1.getText():null));
+						}			
 					
 			}
 
@@ -365,7 +370,7 @@ public class trabalhoParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(34, 1);
+		dbg.location(38, 1);
 
 		}
 		finally {
@@ -380,40 +385,42 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "teste"
-	// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:36:1: teste : ( 'if ' exprRela 'then' comando teste_else ) ;
+	// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:40:1: teste : ( 'if ' exprRela 'then' comando teste_else ) ;
 	public final void teste() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "teste");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(36, 0);
+		dbg.location(40, 0);
 
 		try {
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:36:7: ( ( 'if ' exprRela 'then' comando teste_else ) )
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:40:7: ( ( 'if ' exprRela 'then' comando teste_else ) )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:36:10: ( 'if ' exprRela 'then' comando teste_else )
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:40:10: ( 'if ' exprRela 'then' comando teste_else )
 			{
-			dbg.location(36,10);
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:36:10: ( 'if ' exprRela 'then' comando teste_else )
+			dbg.location(40,10);
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:40:10: ( 'if ' exprRela 'then' comando teste_else )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:36:11: 'if ' exprRela 'then' comando teste_else
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:40:11: 'if ' exprRela 'then' comando teste_else
 			{
-			dbg.location(36,11);
-			match(input,24,FOLLOW_24_in_teste102); dbg.location(36,17);
-			pushFollow(FOLLOW_exprRela_in_teste104);
+			dbg.location(40,11);
+			match(input,24,FOLLOW_24_in_teste100); dbg.location(40,17);
+			pushFollow(FOLLOW_exprRela_in_teste102);
 			exprRela();
 			state._fsp--;
-			dbg.location(36,26);
-			match(input,25,FOLLOW_25_in_teste106); dbg.location(36,33);
-			pushFollow(FOLLOW_comando_in_teste108);
+			dbg.location(40,26);
+			match(input,25,FOLLOW_25_in_teste104); dbg.location(40,33);
+			pushFollow(FOLLOW_comando_in_teste106);
 			comando();
 			state._fsp--;
-			dbg.location(36,41);
-			pushFollow(FOLLOW_teste_else_in_teste110);
+			dbg.location(41,4);
+			considerThisBlock=!considerThisBlock;dbg.location(41,44);
+			pushFollow(FOLLOW_teste_else_in_teste114);
 			teste_else();
 			state._fsp--;
-
+			dbg.location(41,55);
+			considerThisBlock=!considerThisBlock;
 			}
 
 			}
@@ -426,7 +433,7 @@ public class trabalhoParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(36, 51);
+		dbg.location(41, 94);
 
 		}
 		finally {
@@ -441,66 +448,27 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "teste_else"
-	// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:38:1: teste_else : ( ( 'else' comando ) |);
+	// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:43:1: teste_else : 'else' comando ;
 	public final void teste_else() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "teste_else");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(38, 0);
+		dbg.location(43, 0);
 
 		try {
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:39:2: ( ( 'else' comando ) |)
-			int alt3=2;
-			try { dbg.enterDecision(3, decisionCanBacktrack[3]);
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:44:2: ( 'else' comando )
+			dbg.enterAlt(1);
 
-			int LA3_0 = input.LA(1);
-			if ( (LA3_0==23) ) {
-				alt3=1;
-			}
-			else if ( (LA3_0==EOF||LA3_0==VAR||LA3_0==24||LA3_0==26) ) {
-				alt3=2;
-			}
-
-			else {
-				NoViableAltException nvae =
-					new NoViableAltException("", 3, 0, input);
-				dbg.recognitionException(nvae);
-				throw nvae;
-			}
-
-			} finally {dbg.exitDecision(3);}
-
-			switch (alt3) {
-				case 1 :
-					dbg.enterAlt(1);
-
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:40:3: ( 'else' comando )
-					{
-					dbg.location(40,3);
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:40:3: ( 'else' comando )
-					dbg.enterAlt(1);
-
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:40:4: 'else' comando
-					{
-					dbg.location(40,4);
-					match(input,23,FOLLOW_23_in_teste_else127); dbg.location(40,11);
-					pushFollow(FOLLOW_comando_in_teste_else129);
-					comando();
-					state._fsp--;
-
-					}
-
-					}
-					break;
-				case 2 :
-					dbg.enterAlt(2);
-
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:42:2: 
-					{
-					}
-					break;
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:45:3: 'else' comando
+			{
+			dbg.location(45,3);
+			match(input,23,FOLLOW_23_in_teste_else132); dbg.location(45,10);
+			pushFollow(FOLLOW_comando_in_teste_else134);
+			comando();
+			state._fsp--;
 
 			}
+
 		}
 		catch (RecognitionException re) {
 			reportError(re);
@@ -509,7 +477,7 @@ public class trabalhoParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(42, 1);
+		dbg.location(45, 16);
 
 		}
 		finally {
@@ -524,27 +492,27 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "iteracao"
-	// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:44:1: iteracao : 'while' exprRela 'do' comando ;
+	// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:47:1: iteracao : 'while' exprRela 'do' comando ;
 	public final void iteracao() throws RecognitionException {
 		try { dbg.enterRule(getGrammarFileName(), "iteracao");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(44, 0);
+		dbg.location(47, 0);
 
 		try {
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:44:9: ( 'while' exprRela 'do' comando )
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:47:9: ( 'while' exprRela 'do' comando )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:44:11: 'while' exprRela 'do' comando
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:47:11: 'while' exprRela 'do' comando
 			{
-			dbg.location(44,11);
-			match(input,26,FOLLOW_26_in_iteracao143); dbg.location(44,19);
-			pushFollow(FOLLOW_exprRela_in_iteracao145);
+			dbg.location(47,11);
+			match(input,26,FOLLOW_26_in_iteracao141); dbg.location(47,19);
+			pushFollow(FOLLOW_exprRela_in_iteracao143);
 			exprRela();
 			state._fsp--;
-			dbg.location(44,28);
-			match(input,22,FOLLOW_22_in_iteracao147); dbg.location(44,33);
-			pushFollow(FOLLOW_comando_in_iteracao149);
+			dbg.location(47,28);
+			match(input,22,FOLLOW_22_in_iteracao145); dbg.location(47,33);
+			pushFollow(FOLLOW_comando_in_iteracao147);
 			comando();
 			state._fsp--;
 
@@ -558,7 +526,7 @@ public class trabalhoParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(44, 39);
+		dbg.location(47, 39);
 
 		}
 		finally {
@@ -573,45 +541,57 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "exprRela"
-	// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:46:1: exprRela returns [boolean value] : d= expr COMP_OP e= expr ;
-	public final boolean exprRela() throws RecognitionException {
-		boolean value = false;
-
-
+	// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:49:1: exprRela : d= expr COMP_OP e= expr ;
+	public final void exprRela() throws RecognitionException {
 		Token COMP_OP3=null;
-		int d =0;
-		int e =0;
+		double d =0.0;
+		double e =0.0;
 
 		try { dbg.enterRule(getGrammarFileName(), "exprRela");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(46, 0);
+		dbg.location(49, 0);
 
 		try {
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:47:2: (d= expr COMP_OP e= expr )
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:49:9: (d= expr COMP_OP e= expr )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:47:4: d= expr COMP_OP e= expr
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:50:2: d= expr COMP_OP e= expr
 			{
-			dbg.location(47,5);
-			pushFollow(FOLLOW_expr_in_exprRela164);
+			dbg.location(50,3);
+			pushFollow(FOLLOW_expr_in_exprRela157);
 			d=expr();
 			state._fsp--;
-			dbg.location(47,11);
-			COMP_OP3=(Token)match(input,COMP_OP,FOLLOW_COMP_OP_in_exprRela166); dbg.location(47,20);
-			pushFollow(FOLLOW_expr_in_exprRela170);
+			dbg.location(50,9);
+			COMP_OP3=(Token)match(input,COMP_OP,FOLLOW_COMP_OP_in_exprRela159); dbg.location(50,18);
+			pushFollow(FOLLOW_expr_in_exprRela163);
 			e=expr();
 			state._fsp--;
-			dbg.location(47,26);
+			dbg.location(50,24);
 
-						if ((COMP_OP3!=null?COMP_OP3.getText():null).equals("=")) value = (d == e);
-						else if ((COMP_OP3!=null?COMP_OP3.getText():null).equals("!=")) value = d != e;
-						else if ((COMP_OP3!=null?COMP_OP3.getText():null).equals("<")) value = d < e;
-						else if ((COMP_OP3!=null?COMP_OP3.getText():null).equals(">")) value = d > e;
-						else if ((COMP_OP3!=null?COMP_OP3.getText():null).equals("<=")) value = d <= e;
-						else if ((COMP_OP3!=null?COMP_OP3.getText():null).equals(">=")) value = d >= e;
-						else System.err.println("Occurred some errors to compare values");
-					
+					if(considerThisBlock){
+						if ((COMP_OP3!=null?COMP_OP3.getText():null).equals("=")){
+							considerThisBlock = (d == e);
+							System.out.print("Comparação de igualdade entre "+d+" e "+e);
+						}else if((COMP_OP3!=null?COMP_OP3.getText():null).equals("!=")){
+							 considerThisBlock = d != e;
+							 System.out.print("Comparação de diferença entre "+d+" e "+e);
+						}else if ((COMP_OP3!=null?COMP_OP3.getText():null).equals("<")){
+							 considerThisBlock = d < e;
+							 System.out.print("Comparação de menor entre "+d+" e "+e);
+						}else if ((COMP_OP3!=null?COMP_OP3.getText():null).equals(">")){
+							 considerThisBlock = d > e;
+							 System.out.print("Comparação de maior entre "+d+" e "+e);
+						}else if ((COMP_OP3!=null?COMP_OP3.getText():null).equals("<=")){
+							 considerThisBlock = d <= e;
+							 System.out.print("Comparação de menor igual entre "+d+" e "+e);
+						}else if ((COMP_OP3!=null?COMP_OP3.getText():null).equals(">=")){
+							 considerThisBlock = d >= e;
+							 System.out.print("Comparação de maior igual entre "+d+" e "+e);
+						}
+						System.out.println(" | Resultado -> "+considerThisBlock);
+					}		
+				
 			}
 
 		}
@@ -622,7 +602,7 @@ public class trabalhoParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(56, 1);
+		dbg.location(74, 1);
 
 		}
 		finally {
@@ -631,42 +611,135 @@ public class trabalhoParser extends DebugParser {
 			if ( getRuleLevel()==0 ) {dbg.terminate();}
 		}
 
-		return value;
 	}
 	// $ANTLR end "exprRela"
 
 
 
 	// $ANTLR start "expr"
-	// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:58:1: expr returns [int value] : d= termo ( FIRST_OP e= termo )* ;
-	public final int expr() throws RecognitionException {
-		int value = 0;
+	// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:76:1: expr returns [double value] : d= termo ( FIRST_OP e= termo )* ;
+	public final double expr() throws RecognitionException {
+		double value = 0.0;
 
 
 		Token FIRST_OP4=null;
-		int d =0;
-		int e =0;
+		double d =0.0;
+		double e =0.0;
 
 		try { dbg.enterRule(getGrammarFileName(), "expr");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(58, 0);
+		dbg.location(76, 0);
 
 		try {
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:59:2: (d= termo ( FIRST_OP e= termo )* )
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:77:2: (d= termo ( FIRST_OP e= termo )* )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:60:3: d= termo ( FIRST_OP e= termo )*
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:78:3: d= termo ( FIRST_OP e= termo )*
 			{
-			dbg.location(60,4);
-			pushFollow(FOLLOW_termo_in_expr192);
+			dbg.location(78,4);
+			pushFollow(FOLLOW_termo_in_expr185);
 			d=termo();
 			state._fsp--;
-			dbg.location(60,11);
+			dbg.location(78,11);
 			 
 						value += d;
-					dbg.location(63,3);
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:63:3: ( FIRST_OP e= termo )*
+					dbg.location(81,3);
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:81:3: ( FIRST_OP e= termo )*
+			try { dbg.enterSubRule(3);
+
+			loop3:
+			while (true) {
+				int alt3=2;
+				try { dbg.enterDecision(3, decisionCanBacktrack[3]);
+
+				int LA3_0 = input.LA(1);
+				if ( (LA3_0==FIRST_OP) ) {
+					alt3=1;
+				}
+
+				} finally {dbg.exitDecision(3);}
+
+				switch (alt3) {
+				case 1 :
+					dbg.enterAlt(1);
+
+					// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:81:4: FIRST_OP e= termo
+					{
+					dbg.location(81,4);
+					FIRST_OP4=(Token)match(input,FIRST_OP,FOLLOW_FIRST_OP_in_expr193); dbg.location(81,14);
+					pushFollow(FOLLOW_termo_in_expr197);
+					e=termo();
+					state._fsp--;
+					dbg.location(81,21);
+
+								if ((FIRST_OP4!=null?FIRST_OP4.getText():null).equals("+")) value += e;
+								else value -= e;
+							
+					}
+					break;
+
+				default :
+					break loop3;
+				}
+			}
+			} finally {dbg.exitSubRule(3);}
+
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+		dbg.location(85, 1);
+
+		}
+		finally {
+			dbg.exitRule(getGrammarFileName(), "expr");
+			decRuleLevel();
+			if ( getRuleLevel()==0 ) {dbg.terminate();}
+		}
+
+		return value;
+	}
+	// $ANTLR end "expr"
+
+
+
+	// $ANTLR start "termo"
+	// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:87:1: termo returns [double value] : d= fator ( SECOND_OP e= fator )* ;
+	public final double termo() throws RecognitionException {
+		double value = 0.0;
+
+
+		Token SECOND_OP5=null;
+		double d =0.0;
+		double e =0.0;
+
+		try { dbg.enterRule(getGrammarFileName(), "termo");
+		if ( getRuleLevel()==0 ) {dbg.commence();}
+		incRuleLevel();
+		dbg.location(87, 0);
+
+		try {
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:88:2: (d= fator ( SECOND_OP e= fator )* )
+			dbg.enterAlt(1);
+
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:89:3: d= fator ( SECOND_OP e= fator )*
+			{
+			dbg.location(89,4);
+			pushFollow(FOLLOW_fator_in_termo221);
+			d=fator();
+			state._fsp--;
+			dbg.location(89,11);
+
+						value += d;
+					dbg.location(92,3);
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:92:3: ( SECOND_OP e= fator )*
 			try { dbg.enterSubRule(4);
 
 			loop4:
@@ -675,7 +748,7 @@ public class trabalhoParser extends DebugParser {
 				try { dbg.enterDecision(4, decisionCanBacktrack[4]);
 
 				int LA4_0 = input.LA(1);
-				if ( (LA4_0==FIRST_OP) ) {
+				if ( (LA4_0==SECOND_OP) ) {
 					alt4=1;
 				}
 
@@ -685,17 +758,17 @@ public class trabalhoParser extends DebugParser {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:63:4: FIRST_OP e= termo
+					// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:92:4: SECOND_OP e= fator
 					{
-					dbg.location(63,4);
-					FIRST_OP4=(Token)match(input,FIRST_OP,FOLLOW_FIRST_OP_in_expr200); dbg.location(63,14);
-					pushFollow(FOLLOW_termo_in_expr204);
-					e=termo();
+					dbg.location(92,4);
+					SECOND_OP5=(Token)match(input,SECOND_OP,FOLLOW_SECOND_OP_in_termo228); dbg.location(92,15);
+					pushFollow(FOLLOW_fator_in_termo232);
+					e=fator();
 					state._fsp--;
-					dbg.location(63,21);
+					dbg.location(92,22);
 
-								if ((FIRST_OP4!=null?FIRST_OP4.getText():null).equals("+")) value += e;
-								else value -= e;
+								if ((SECOND_OP5!=null?SECOND_OP5.getText():null).equals("*")) value *= e;
+								else value /= e;
 							
 					}
 					break;
@@ -716,101 +789,7 @@ public class trabalhoParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(67, 1);
-
-		}
-		finally {
-			dbg.exitRule(getGrammarFileName(), "expr");
-			decRuleLevel();
-			if ( getRuleLevel()==0 ) {dbg.terminate();}
-		}
-
-		return value;
-	}
-	// $ANTLR end "expr"
-
-
-
-	// $ANTLR start "termo"
-	// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:69:1: termo returns [int value] : d= fator ( SECOND_OP e= fator )* ;
-	public final int termo() throws RecognitionException {
-		int value = 0;
-
-
-		Token SECOND_OP5=null;
-		int d =0;
-		int e =0;
-
-		try { dbg.enterRule(getGrammarFileName(), "termo");
-		if ( getRuleLevel()==0 ) {dbg.commence();}
-		incRuleLevel();
-		dbg.location(69, 0);
-
-		try {
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:70:2: (d= fator ( SECOND_OP e= fator )* )
-			dbg.enterAlt(1);
-
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:71:3: d= fator ( SECOND_OP e= fator )*
-			{
-			dbg.location(71,4);
-			pushFollow(FOLLOW_fator_in_termo228);
-			d=fator();
-			state._fsp--;
-			dbg.location(71,11);
-
-						value += d;
-					dbg.location(74,3);
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:74:3: ( SECOND_OP e= fator )*
-			try { dbg.enterSubRule(5);
-
-			loop5:
-			while (true) {
-				int alt5=2;
-				try { dbg.enterDecision(5, decisionCanBacktrack[5]);
-
-				int LA5_0 = input.LA(1);
-				if ( (LA5_0==SECOND_OP) ) {
-					alt5=1;
-				}
-
-				} finally {dbg.exitDecision(5);}
-
-				switch (alt5) {
-				case 1 :
-					dbg.enterAlt(1);
-
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:74:4: SECOND_OP e= fator
-					{
-					dbg.location(74,4);
-					SECOND_OP5=(Token)match(input,SECOND_OP,FOLLOW_SECOND_OP_in_termo235); dbg.location(74,15);
-					pushFollow(FOLLOW_fator_in_termo239);
-					e=fator();
-					state._fsp--;
-					dbg.location(74,22);
-
-								if ((SECOND_OP5!=null?SECOND_OP5.getText():null).equals("*")) value *= e;
-								else value /= e;
-							
-					}
-					break;
-
-				default :
-					break loop5;
-				}
-			}
-			} finally {dbg.exitSubRule(5);}
-
-			}
-
-		}
-		catch (RecognitionException re) {
-			reportError(re);
-			recover(input,re);
-		}
-		finally {
-			// do for sure before leaving
-		}
-		dbg.location(78, 1);
+		dbg.location(96, 1);
 
 		}
 		finally {
@@ -826,88 +805,91 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "fator"
-	// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:80:1: fator returns [int value] : ( VAR |e= num | L_PAREN e= expr R_PAREN );
-	public final int fator() throws RecognitionException {
-		int value = 0;
+	// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:98:1: fator returns [double value] : ( VAR |e= num | L_PAREN e= expr R_PAREN );
+	public final double fator() throws RecognitionException {
+		double value = 0.0;
 
 
 		Token VAR6=null;
-		int e =0;
+		double e =0.0;
 
 		try { dbg.enterRule(getGrammarFileName(), "fator");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(80, 0);
+		dbg.location(98, 0);
 
 		try {
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:81:2: ( VAR |e= num | L_PAREN e= expr R_PAREN )
-			int alt6=3;
-			try { dbg.enterDecision(6, decisionCanBacktrack[6]);
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:99:2: ( VAR |e= num | L_PAREN e= expr R_PAREN )
+			int alt5=3;
+			try { dbg.enterDecision(5, decisionCanBacktrack[5]);
 
 			switch ( input.LA(1) ) {
 			case VAR:
 				{
-				alt6=1;
+				alt5=1;
 				}
 				break;
 			case DIGITOS:
 				{
-				alt6=2;
+				alt5=2;
 				}
 				break;
 			case L_PAREN:
 				{
-				alt6=3;
+				alt5=3;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 6, 0, input);
+					new NoViableAltException("", 5, 0, input);
 				dbg.recognitionException(nvae);
 				throw nvae;
 			}
-			} finally {dbg.exitDecision(6);}
+			} finally {dbg.exitDecision(5);}
 
-			switch (alt6) {
+			switch (alt5) {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:82:3: VAR
+					// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:100:3: VAR
 					{
-					dbg.location(82,3);
-					VAR6=(Token)match(input,VAR,FOLLOW_VAR_in_fator262); dbg.location(82,7);
+					dbg.location(100,3);
+					VAR6=(Token)match(input,VAR,FOLLOW_VAR_in_fator255); dbg.location(100,7);
 
 								value = 0;
-								if (memory.containsKey((VAR6!=null?VAR6.getText():null))) value = (Integer)memory.get((VAR6!=null?VAR6.getText():null));
-								else System.err.println("Undefined variable " + (VAR6!=null?VAR6.getText():null));
+								if (memory.containsKey((VAR6!=null?VAR6.getText():null))) {
+									value = memory.get((VAR6!=null?VAR6.getText():null));
+								}else {
+									System.out.println("Undefined variable " + (VAR6!=null?VAR6.getText():null));
+								}
 							
 					}
 					break;
 				case 2 :
 					dbg.enterAlt(2);
 
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:87:5: e= num
+					// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:108:5: e= num
 					{
-					dbg.location(87,6);
-					pushFollow(FOLLOW_num_in_fator272);
+					dbg.location(108,6);
+					pushFollow(FOLLOW_num_in_fator265);
 					e=num();
 					state._fsp--;
-					dbg.location(87,11);
+					dbg.location(108,11);
 					 value = e; 
 					}
 					break;
 				case 3 :
 					dbg.enterAlt(3);
 
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:88:5: L_PAREN e= expr R_PAREN
+					// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:109:5: L_PAREN e= expr R_PAREN
 					{
-					dbg.location(88,5);
-					match(input,L_PAREN,FOLLOW_L_PAREN_in_fator281); dbg.location(88,14);
-					pushFollow(FOLLOW_expr_in_fator285);
+					dbg.location(109,5);
+					match(input,L_PAREN,FOLLOW_L_PAREN_in_fator274); dbg.location(109,14);
+					pushFollow(FOLLOW_expr_in_fator278);
 					e=expr();
 					state._fsp--;
-					dbg.location(88,20);
-					match(input,R_PAREN,FOLLOW_R_PAREN_in_fator287); dbg.location(88,28);
+					dbg.location(109,20);
+					match(input,R_PAREN,FOLLOW_R_PAREN_in_fator280); dbg.location(109,28);
 					 value = e; 
 					}
 					break;
@@ -921,7 +903,7 @@ public class trabalhoParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(89, 1);
+		dbg.location(110, 1);
 
 		}
 		finally {
@@ -937,9 +919,9 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "num"
-	// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:92:1: num returns [int value] : DIGITOS (d= fracao )? ;
-	public final int num() throws RecognitionException {
-		int value = 0;
+	// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:113:1: num returns [double value] : DIGITOS (d= fracao )? ;
+	public final double num() throws RecognitionException {
+		double value = 0.0;
 
 
 		Token DIGITOS7=null;
@@ -948,35 +930,35 @@ public class trabalhoParser extends DebugParser {
 		try { dbg.enterRule(getGrammarFileName(), "num");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(92, 0);
+		dbg.location(113, 0);
 
 		try {
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:93:2: ( DIGITOS (d= fracao )? )
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:114:2: ( DIGITOS (d= fracao )? )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:94:3: DIGITOS (d= fracao )?
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:115:3: DIGITOS (d= fracao )?
 			{
-			dbg.location(94,3);
-			DIGITOS7=(Token)match(input,DIGITOS,FOLLOW_DIGITOS_in_num312); dbg.location(94,12);
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:94:12: (d= fracao )?
-			int alt7=2;
-			try { dbg.enterSubRule(7);
-			try { dbg.enterDecision(7, decisionCanBacktrack[7]);
+			dbg.location(115,3);
+			DIGITOS7=(Token)match(input,DIGITOS,FOLLOW_DIGITOS_in_num305); dbg.location(115,12);
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:115:12: (d= fracao )?
+			int alt6=2;
+			try { dbg.enterSubRule(6);
+			try { dbg.enterDecision(6, decisionCanBacktrack[6]);
 
-			int LA7_0 = input.LA(1);
-			if ( (LA7_0==21) ) {
-				alt7=1;
+			int LA6_0 = input.LA(1);
+			if ( (LA6_0==21) ) {
+				alt6=1;
 			}
-			} finally {dbg.exitDecision(7);}
+			} finally {dbg.exitDecision(6);}
 
-			switch (alt7) {
+			switch (alt6) {
 				case 1 :
 					dbg.enterAlt(1);
 
-					// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:94:12: d= fracao
+					// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:115:12: d= fracao
 					{
-					dbg.location(94,12);
-					pushFollow(FOLLOW_fracao_in_num316);
+					dbg.location(115,12);
+					pushFollow(FOLLOW_fracao_in_num309);
 					d=fracao();
 					state._fsp--;
 
@@ -984,11 +966,10 @@ public class trabalhoParser extends DebugParser {
 					break;
 
 			}
-			} finally {dbg.exitSubRule(7);}
-			dbg.location(94,21);
+			} finally {dbg.exitSubRule(6);}
+			dbg.location(115,21);
 
-						//value = Integer.parseInt((DIGITOS7!=null?DIGITOS7.getText():null) + d + $e.value);
-						value = Integer.parseInt((DIGITOS7!=null?DIGITOS7.getText():null)); // ALTERAR AQUII
+						value = Double.parseDouble((DIGITOS7!=null?DIGITOS7.getText():null)); 
 					
 			}
 
@@ -1000,7 +981,7 @@ public class trabalhoParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(98, 1);
+		dbg.location(118, 1);
 
 		}
 		finally {
@@ -1016,7 +997,7 @@ public class trabalhoParser extends DebugParser {
 
 
 	// $ANTLR start "fracao"
-	// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:100:1: fracao returns [String value] : '.' DIGITOS ;
+	// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:120:1: fracao returns [String value] : '.' DIGITOS ;
 	public final String fracao() throws RecognitionException {
 		String value = null;
 
@@ -1026,17 +1007,17 @@ public class trabalhoParser extends DebugParser {
 		try { dbg.enterRule(getGrammarFileName(), "fracao");
 		if ( getRuleLevel()==0 ) {dbg.commence();}
 		incRuleLevel();
-		dbg.location(100, 0);
+		dbg.location(120, 0);
 
 		try {
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:101:2: ( '.' DIGITOS )
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:121:2: ( '.' DIGITOS )
 			dbg.enterAlt(1);
 
-			// C:\\Users\\bruno\\Desktop\\Tradutores\\Trabalho GB\\antlr-lexical-semantic-analysis\\trabalho.g:102:3: '.' DIGITOS
+			// C:\\Users\\Bruno Pozzebon\\Desktop\\antlr-lexical-semantic-analysis\\trabalho.g:122:3: '.' DIGITOS
 			{
-			dbg.location(102,3);
-			match(input,21,FOLLOW_21_in_fracao337); dbg.location(102,6);
-			DIGITOS8=(Token)match(input,DIGITOS,FOLLOW_DIGITOS_in_fracao338); dbg.location(102,14);
+			dbg.location(122,3);
+			match(input,21,FOLLOW_21_in_fracao330); dbg.location(122,6);
+			DIGITOS8=(Token)match(input,DIGITOS,FOLLOW_DIGITOS_in_fracao331); dbg.location(122,14);
 			 value = ("." + (DIGITOS8!=null?DIGITOS8.getText():null)); 
 			}
 
@@ -1048,7 +1029,7 @@ public class trabalhoParser extends DebugParser {
 		finally {
 			// do for sure before leaving
 		}
-		dbg.location(103, 1);
+		dbg.location(123, 1);
 
 		}
 		finally {
@@ -1065,43 +1046,43 @@ public class trabalhoParser extends DebugParser {
 
 
 
-	public static final BitSet FOLLOW_block_in_parse33 = new BitSet(new long[]{0x0000000000000000L});
-	public static final BitSet FOLLOW_EOF_in_parse37 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_comando_in_block47 = new BitSet(new long[]{0x0000000005080002L});
-	public static final BitSet FOLLOW_atribuicao_in_comando56 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_teste_in_comando60 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_iteracao_in_comando64 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_VAR_in_atribuicao81 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_ATRIB_in_atribuicao83 = new BitSet(new long[]{0x0000000000080880L});
-	public static final BitSet FOLLOW_expr_in_atribuicao85 = new BitSet(new long[]{0x0000000000020000L});
-	public static final BitSet FOLLOW_SEMICOLON_in_atribuicao87 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_24_in_teste102 = new BitSet(new long[]{0x0000000000080880L});
-	public static final BitSet FOLLOW_exprRela_in_teste104 = new BitSet(new long[]{0x0000000002000000L});
-	public static final BitSet FOLLOW_25_in_teste106 = new BitSet(new long[]{0x0000000005080000L});
-	public static final BitSet FOLLOW_comando_in_teste108 = new BitSet(new long[]{0x0000000000800000L});
-	public static final BitSet FOLLOW_teste_else_in_teste110 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_23_in_teste_else127 = new BitSet(new long[]{0x0000000005080000L});
-	public static final BitSet FOLLOW_comando_in_teste_else129 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_26_in_iteracao143 = new BitSet(new long[]{0x0000000000080880L});
-	public static final BitSet FOLLOW_exprRela_in_iteracao145 = new BitSet(new long[]{0x0000000000400000L});
-	public static final BitSet FOLLOW_22_in_iteracao147 = new BitSet(new long[]{0x0000000005080000L});
-	public static final BitSet FOLLOW_comando_in_iteracao149 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expr_in_exprRela164 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_COMP_OP_in_exprRela166 = new BitSet(new long[]{0x0000000000080880L});
-	public static final BitSet FOLLOW_expr_in_exprRela170 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_termo_in_expr192 = new BitSet(new long[]{0x0000000000000102L});
-	public static final BitSet FOLLOW_FIRST_OP_in_expr200 = new BitSet(new long[]{0x0000000000080880L});
-	public static final BitSet FOLLOW_termo_in_expr204 = new BitSet(new long[]{0x0000000000000102L});
-	public static final BitSet FOLLOW_fator_in_termo228 = new BitSet(new long[]{0x0000000000010002L});
-	public static final BitSet FOLLOW_SECOND_OP_in_termo235 = new BitSet(new long[]{0x0000000000080880L});
-	public static final BitSet FOLLOW_fator_in_termo239 = new BitSet(new long[]{0x0000000000010002L});
-	public static final BitSet FOLLOW_VAR_in_fator262 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_num_in_fator272 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_L_PAREN_in_fator281 = new BitSet(new long[]{0x0000000000080880L});
-	public static final BitSet FOLLOW_expr_in_fator285 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_R_PAREN_in_fator287 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_DIGITOS_in_num312 = new BitSet(new long[]{0x0000000000200002L});
-	public static final BitSet FOLLOW_fracao_in_num316 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_21_in_fracao337 = new BitSet(new long[]{0x0000000000000080L});
-	public static final BitSet FOLLOW_DIGITOS_in_fracao338 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_block_in_parse31 = new BitSet(new long[]{0x0000000000000000L});
+	public static final BitSet FOLLOW_EOF_in_parse35 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_comando_in_block45 = new BitSet(new long[]{0x0000000005080002L});
+	public static final BitSet FOLLOW_atribuicao_in_comando54 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_teste_in_comando58 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_iteracao_in_comando62 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_VAR_in_atribuicao79 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_ATRIB_in_atribuicao81 = new BitSet(new long[]{0x0000000000080880L});
+	public static final BitSet FOLLOW_expr_in_atribuicao83 = new BitSet(new long[]{0x0000000000020000L});
+	public static final BitSet FOLLOW_SEMICOLON_in_atribuicao85 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_24_in_teste100 = new BitSet(new long[]{0x0000000000080880L});
+	public static final BitSet FOLLOW_exprRela_in_teste102 = new BitSet(new long[]{0x0000000002000000L});
+	public static final BitSet FOLLOW_25_in_teste104 = new BitSet(new long[]{0x0000000005080000L});
+	public static final BitSet FOLLOW_comando_in_teste106 = new BitSet(new long[]{0x0000000000800000L});
+	public static final BitSet FOLLOW_teste_else_in_teste114 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_23_in_teste_else132 = new BitSet(new long[]{0x0000000005080000L});
+	public static final BitSet FOLLOW_comando_in_teste_else134 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_26_in_iteracao141 = new BitSet(new long[]{0x0000000000080880L});
+	public static final BitSet FOLLOW_exprRela_in_iteracao143 = new BitSet(new long[]{0x0000000000400000L});
+	public static final BitSet FOLLOW_22_in_iteracao145 = new BitSet(new long[]{0x0000000005080000L});
+	public static final BitSet FOLLOW_comando_in_iteracao147 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expr_in_exprRela157 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_COMP_OP_in_exprRela159 = new BitSet(new long[]{0x0000000000080880L});
+	public static final BitSet FOLLOW_expr_in_exprRela163 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_termo_in_expr185 = new BitSet(new long[]{0x0000000000000102L});
+	public static final BitSet FOLLOW_FIRST_OP_in_expr193 = new BitSet(new long[]{0x0000000000080880L});
+	public static final BitSet FOLLOW_termo_in_expr197 = new BitSet(new long[]{0x0000000000000102L});
+	public static final BitSet FOLLOW_fator_in_termo221 = new BitSet(new long[]{0x0000000000010002L});
+	public static final BitSet FOLLOW_SECOND_OP_in_termo228 = new BitSet(new long[]{0x0000000000080880L});
+	public static final BitSet FOLLOW_fator_in_termo232 = new BitSet(new long[]{0x0000000000010002L});
+	public static final BitSet FOLLOW_VAR_in_fator255 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_num_in_fator265 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_L_PAREN_in_fator274 = new BitSet(new long[]{0x0000000000080880L});
+	public static final BitSet FOLLOW_expr_in_fator278 = new BitSet(new long[]{0x0000000000004000L});
+	public static final BitSet FOLLOW_R_PAREN_in_fator280 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_DIGITOS_in_num305 = new BitSet(new long[]{0x0000000000200002L});
+	public static final BitSet FOLLOW_fracao_in_num309 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_21_in_fracao330 = new BitSet(new long[]{0x0000000000000080L});
+	public static final BitSet FOLLOW_DIGITOS_in_fracao331 = new BitSet(new long[]{0x0000000000000002L});
 }

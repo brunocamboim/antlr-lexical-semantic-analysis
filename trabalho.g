@@ -1,7 +1,6 @@
 grammar trabalho;
 options {
 	language=Java;
-	//backtrack=true;
 }
 @header {
 	import java.util.HashMap;
@@ -10,13 +9,15 @@ options {
 }
 @members {
 	String s;
-	HashMap<String, Integer> memory = new HashMap<String, Integer>();
+	HashMap<String, Double> memory = new HashMap<String, Double>();
+	boolean considerThisBlock = true;
 }
 
 parse	: 	block {
-			for (Map.Entry<String, Integer> entry : memory.entrySet()) {
+			System.out.println("\n\n Logs das variáveis\n\n");
+			for (Map.Entry<String, Double> entry : memory.entrySet()) {
 		            	String key = entry.getKey();
-		            	int value = entry.getValue();
+		            	double value = entry.getValue();
 		            	System.out.println("Variavel: " + key + " - Valor: " + value);
 		        }
 			
@@ -29,33 +30,50 @@ comando	:	atribuicao | teste | iteracao;
 atribuicao
 	:		
 		VAR ATRIB expr SEMICOLON {
-			memory.put($VAR.text, $expr.value);
+			if(considerThisBlock){
+				memory.put($VAR.text, $expr.value);
+				System.out.println("Valor "+$expr.value+" atribuido a variavel "+$VAR.text);
+			}			
 		}
 	;
 	
-teste	: 	('if ' exprRela 'then' comando teste_else);
+teste	: 	('if ' exprRela 'then' comando 
+			{considerThisBlock=!considerThisBlock;} teste_else {considerThisBlock=!considerThisBlock;});
  	
 teste_else	
 	: 
-		('else' comando)
-		|
-	;
+		'else' comando;
 
 iteracao:	'while' exprRela 'do' comando;
 
-exprRela returns [boolean value]
-	:	d=expr COMP_OP e=expr {
-			if ($COMP_OP.text.equals("=")) $value = ($d.value == $e.value);
-			else if ($COMP_OP.text.equals("!=")) $value = $d.value != $e.value;
-			else if ($COMP_OP.text.equals("<")) $value = $d.value < $e.value;
-			else if ($COMP_OP.text.equals(">")) $value = $d.value > $e.value;
-			else if ($COMP_OP.text.equals("<=")) $value = $d.value <= $e.value;
-			else if ($COMP_OP.text.equals(">=")) $value = $d.value >= $e.value;
-			else System.err.println("Occurred some errors to compare values");
-		}
+exprRela:
+	d=expr COMP_OP e=expr {
+		if(considerThisBlock){
+			if ($COMP_OP.text.equals("=")){
+				considerThisBlock = ($d.value == $e.value);
+				System.out.print("Comparação de igualdade entre "+$d.value+" e "+$e.value);
+			}else if($COMP_OP.text.equals("!=")){
+				 considerThisBlock = $d.value != $e.value;
+				 System.out.print("Comparação de diferença entre "+$d.value+" e "+$e.value);
+			}else if ($COMP_OP.text.equals("<")){
+				 considerThisBlock = $d.value < $e.value;
+				 System.out.print("Comparação de menor entre "+$d.value+" e "+$e.value);
+			}else if ($COMP_OP.text.equals(">")){
+				 considerThisBlock = $d.value > $e.value;
+				 System.out.print("Comparação de maior entre "+$d.value+" e "+$e.value);
+			}else if ($COMP_OP.text.equals("<=")){
+				 considerThisBlock = $d.value <= $e.value;
+				 System.out.print("Comparação de menor igual entre "+$d.value+" e "+$e.value);
+			}else if ($COMP_OP.text.equals(">=")){
+				 considerThisBlock = $d.value >= $e.value;
+				 System.out.print("Comparação de maior igual entre "+$d.value+" e "+$e.value);
+			}
+			System.out.println(" | Resultado -> "+considerThisBlock);
+		}		
+	}
 	;
 
-expr	returns [int value]
+expr	returns [double value]
 	:	
 		d=termo { 
 			$value += $d.value;
@@ -66,7 +84,7 @@ expr	returns [int value]
 		})*
 	;
 
-termo	returns [int value]
+termo	returns [double value]
 	:	
 		d=fator {
 			$value += $d.value;
@@ -77,23 +95,25 @@ termo	returns [int value]
 		})*
 	;
 
-fator	returns [int value]
+fator	returns [double value]
 	:	 
 		VAR {
 			$value = 0;
-			if (memory.containsKey($VAR.text)) $value = (Integer)memory.get($VAR.text);
-			else System.err.println("Undefined variable " + $VAR.text);
+			if (memory.containsKey($VAR.text)) {
+				$value = memory.get($VAR.text);
+			}else {
+				System.out.println("Undefined variable " + $VAR.text);
+			}
 		}
 		| e=num { $value = $e.value; } 
 		| L_PAREN e=expr R_PAREN { $value = $e.value; }
 	;
 
     
-num returns [int value]
+num returns [double value]
 	:	
 		DIGITOS d=fracao? {
-			//$value = Integer.parseInt($DIGITOS.text + $d.value + $e.value);
-			$value = Integer.parseInt($DIGITOS.text); // ALTERAR AQUII
+			$value = Double.parseDouble($DIGITOS.text); 
 		}
 	;
 
@@ -106,8 +126,6 @@ FIRST_OP:	('+'|'-');
 
 SECOND_OP
 	:	('*'|'/');
-	
-//expoente:	'E'('+'|'-')?DIGITOS;
 
 DIGITOS	:	('0'..'9')+;
 	
@@ -150,4 +168,3 @@ FallThrough
 }
   :  .
   ;
-
