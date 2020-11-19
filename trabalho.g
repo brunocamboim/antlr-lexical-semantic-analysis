@@ -38,11 +38,11 @@ atribuicao
 	;
 	
 teste	: 	('if ' exprRela 'then' comando+ 
-			{considerThisBlock=!considerThisBlock;} teste_else {considerThisBlock=!considerThisBlock;});
+			 teste_else );
  	
 teste_else	
 	: 
-		'else' comando+;
+		{considerThisBlock=!considerThisBlock;} 'else' comando+  | ;
 
 iteracao:	'while' exprRela 'do' comando+;
 
@@ -102,7 +102,7 @@ fator	returns [double value]
 			if (memory.containsKey($VAR.text)) {
 				$value = memory.get($VAR.text);
 			}else {
-				System.out.println("Undefined variable " + $VAR.text);
+				System.out.println("Variavel Indefinida " + $VAR.text);
 			}
 		}
 		| e=num { $value = $e.value; } 
@@ -162,7 +162,7 @@ SEMICOLON
 FallThrough
 @after{
   	throw new RuntimeException(String.format(
-      		"Caractere ilegal reconhecido na linha \%d, coluna \%d: '\%s'",
+      		"Caracter ilegal reconhecido na linha \%d, coluna \%d: '\%s'",
       		getLine(), getCharPositionInLine(), getText()
 	));
 }

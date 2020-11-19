@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g 2020-11-18 23:30:54
+// $ANTLR 3.5.1 C:\\Users\\stzgu\\git\\antlr-lexical-semantic-analysis\\trabalho.g 2020-11-19 01:39:56
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -749,7 +749,7 @@ public class trabalhoLexer extends Lexer {
 			state.channel = _channel;
 
 			  	throw new RuntimeException(String.format(
-			      		"Caractere ilegal reconhecido na linha %d, coluna %d: '%s'",
+			      		"Caracter ilegal reconhecido na linha %d, coluna %d: '%s'",
 			      		getLine(), getCharPositionInLine(), getText()
 				));
 
